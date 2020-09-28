@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-15" standalone="no"?><uc-export clientvers="11.0.0">
+<JOBI name="PCK.AUTOMIC_CA_SDM.PUB.INCLUDE.CREATE_JSON">
+<HEADER state="1">
+<Title>Create json of type key:value</Title>
+<ArchiveKey1/>
+<ArchiveKey2/>
+<OH_SubType/>
+</HEADER>
+<SCRIPT mode="1" state="1">
+<MSCRI><![CDATA[:SET &JSON_OBJ# = STR_CAT('"&UC4RB_FIELD_NAME#":',&UC4RB_FIELD_VALUE#)
+:SET &JSON_OBJ# = STR_CAT(&SEPARATOR#,'&JSON_OBJ#')
+:SET &UC4RB_JSON_CONTENTS# = STR_CAT(' &UC4RB_JSON_CONTENTS#','&JSON_OBJ#')
+:SET &SEPARATOR# = ',']]></MSCRI>
+</SCRIPT>
+<DOCU_Docu state="1" type="text">
+<DOC/>
+</DOCU_Docu>
+</JOBI>
+</uc-export>

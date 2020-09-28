@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="ISO-8859-15" standalone="no"?><uc-export clientvers="11.0.0">
+<DOCU name="PCK.AUTOMIC_CA_SDM.PUB.DOC">
+<HEADER state="1">
+<Title>Package Documentation</Title>
+<ArchiveKey1/>
+<ArchiveKey2/>
+<OH_SubType/>
+</HEADER>
+<DOCU_Docu state="1" type="text">
+<DOC><![CDATA[About Automic's CA Service Desk Manager Package
+================================
+CA Service Management service desk capabilities streamline support operations by combining comprehensive support processes with a new, modern xFlow analyst experience.
+Combined with a unified user experience that is focused on self-service, mobility, social media-based collaboration and advanced analytics, users can become better informed and work more naturally. Using this package, we can automate the following.
+
+* Create ticket of different types. E.g. Incident,Problem,Request Change order or Issue.
+* Change status
+* Get ticket status
+* Log comment on ticket
+
+=Supported CA Service Desk Manager versions=
+14.1.03
+
+=Setup=
+* This action pack supports Webservice Agent.
+* The Agent should be able to access CA Service Desk Manager rest api endpoint URL in order to make HTTP(s) requests.
+* Connection details for Service Desk Manager should be known to the user.
+
+=Variables=
+(none)
+
+=Common Promptset=
+
+--Endpoint--
+* URL Endpoint                :This URL specifies the entry point of the REST service. For example, http://localhost/ARA/api/data/v1/ is the URL Endpoint of the ARA REST API. The relative resource location (specified on the request tab) is appended to this URL during runtime such as, http://localhost/ARA/api/data/v1/content.
+
+--Basic Authentication--
+* Username                       :The user name.
+* Password                        :The password.
+* Host                                :The host to connect to. Only required if the endpoint differs from the authentication host.
+* Port                                 :The port to use. Only required if the endpoint differs from the authentication host.
+* Realm                             :The realm. Only required if the endpoint differs from the authentication host. Also, this field is optional when a host is specified.
+* Preemptive                     :Activates preemptive authentication. Preemptive authentication sends the authentication information without waiting for the server to give an unauthorized response. This reduces some overhead, and may be required in cases where the server does not reply with an unauthorized response. You use preemptive authorization when you trust the endpoint enough to send authentication credentials somewhere without being asked for them.
+
+--Proxy Settings--
+* Server Type                     :Allows you to select HTTP or SOCKS as server type or to leave the default of No Proxy to not use a proxy server.
+* Host                                 :The host where the proxy server resides.
+* Port                                  :The port of the proxy server.
+* Username                        :The user to pass to the proxy server.
+* Password                         :The password to pass to the proxy server (if required).
+* Realm                              :The realm.
+* Authentication method     :If the proxy server selected in the Server Type field is HTTP, this field allows you to select Basic, Digest or NTLM as the authentication.
+
+--Advanced connection settings--
+* Connection Timeout (s)   :The number of seconds before timing out while attempting to connect to the URL endpoint. When set to 0, the connection never times out. The default is 30 seconds.
+* Read Timeout (s)             :The number of seconds before timing out when waiting for a method call. When set to 0, the read never times out. The default is 60 seconds.
+* Follow Redirects              :Specifies that the request should follow site redirects. For example, if you are trying to get to http://test.com and that site redirects to http://newtest.com, the request will automatically follow the redirect and connect with http://newtest.com.
+
+--Overwrite Agent--
+* Overwrite RA Agent     : Overwrite RA Agent
+
+=Actions=
+Following actions are supported for CA Service Desk Manager.
+
+* Action Name:  PCK.AUTOMIC_CA_SDM.PUB.ACTION.GET_TICKET_STATUS 
+* Action Description: This action is used to get the status of the ticket.
+
+* Action Name:  PCK.AUTOMIC_CA_SDM.PUB.ACTION.CREATE_TICKET 
+* Action Description: This action is used to create a ticket of type Incident,Problem,Request Change order or Issue
+
+* Action Name:  PCK.AUTOMIC_CA_SDM.PUB.ACTION.LOG_COMMENT
+* Action Description: This action is used to log comment in the ticket in Service Desk Manager.
+
+* Action Name:  PCK.AUTOMIC_CA_SDM.PUB.ACTION.CHANGE_TICKET_STATUS
+* Action Description: This action is used to change the status of the ticket.]]></DOC>
+</DOCU_Docu>
+</DOCU>
+</uc-export>
