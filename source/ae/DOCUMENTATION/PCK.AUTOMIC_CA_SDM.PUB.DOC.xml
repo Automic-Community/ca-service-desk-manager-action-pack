@@ -17,9 +17,6 @@ Combined with a unified user experience that is focused on self-service, mobilit
 * Get ticket status
 * Log comment on ticket
 
-=Supported CA Service Desk Manager versions=
-14.1.03
-
 =Setup=
 * This action pack supports Webservice Agent.
 * The Agent should be able to access CA Service Desk Manager rest api endpoint URL in order to make HTTP(s) requests.
